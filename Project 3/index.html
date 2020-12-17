@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+  <!-- Fonts from googlefonts -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Custom css link -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container mydiv" id="divtag">
+    <div id="quiz">
+      <h1>JavaScript Quiz</h1>
+      <hr style="margin-bottom:20px">
+      <p id="question">Question</p>
+      <!-- Container for button -->
+      <div class="container">
+        <div class="row Buttons">
+          <div class="col-lg-3 col-md-6">
+            <button value="a" id="btn0" onclick="check(this.value)"></button>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <button value="b" id="btn1" onclick="check(this.value)"></button>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <button value="c" id="btn2" onclick="check(this.value)"></button>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <button value="d" id="btn3" onclick="check(this.value)"></button>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <button id="next" type="button" name="button" onclick="increase()">Next</button>
+        </div>
+      </div>
+      <hr style="margin-top:50px">
+      <p id="progress"></p>
+      <p id="score"></p>
+      <p id="image"></p>
+   </div>
+  </div>
+  <!-- Link for javascript -->
+  <script src="app.js"></script>
+  <!-- bs4 script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
