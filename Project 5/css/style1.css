@@ -1,0 +1,147 @@
+body {
+    /* font-family: "Kaushan Script", cursive; */
+    font-family: 'Gochi Hand', cursive;
+    /* background: #fff; */
+    color: white;
+    background: linear-gradient(rgba(29, 32, 32, 0.5),rgba(142, 198, 197, 0.5)),
+    url("../img/bg.jpg") center/cover fixed no-repeat;
+  }
+/* =========================== */
+/* navigation bar styling */
+/* =========================== */
+  .mynavbar{
+    background-color: rgba(0,0,0,0.2);
+    color:white;
+    font-size: 20px;
+  }
+  .nav-link {
+    color: #d8345f;
+    /* ease-in-out - specifies a transition effect with a slow start and end */
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-link:hover {
+    color: white;
+  }
+  .navbar-toggler {
+    outline: none !important;
+    /* FOR REMOVING OUTLINE FROM TOGGLER ICON */
+  }
+  .toggler-icon {
+    font-size: 2.5rem;
+    color: #d8345f;
+  }
+  .cart-info__icon {
+    color: white;
+    cursor: pointer;
+  }
+  .cart-info {
+    border: 0.1rem solid white;
+    color: White;
+    border-radius: 0.25rem;
+    /* padding: 0.4rem 0.6rem; */
+    padding: 5px 7px;
+    cursor: pointer;
+  }
+  .cart-info:hover {
+    background: #d8345f;
+    border-color: #d8345f;
+    color: white;
+  }
+  .cart-info:hover .cart-info__icon {
+    color: white;
+  }
+/* =========================== */
+/*      banner styling */
+/* =========================== */
+
+  .banner {
+    min-height: 50vh;
+    color: white;
+    margin-top: 10%;
+    /* margin-top: -4rem; */
+  }
+  .banner-title {
+    background-color: #d8345f;
+    font-size: 80px;
+    color: white;
+    border-radius: 25px;
+  }
+  .banner-link {
+    font-size: 20px;
+    color: white;
+    border: 3px solid black;
+    /* border: 0.2rem solid black; */
+  }
+  .banner-link:hover {
+    background: black;
+    color: #d8345f;
+  }
+
+/* =========================== */
+/*      cart styling */
+/* =========================== */
+.cart {
+  position: absolute;
+  /* min-height: 10rem; */
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  /* padding: 2% 1.5%; */
+  width: 0;
+  overflow: hidden;
+}
+ .show-cart {
+  width: 400px;
+  padding: 2% 1.5%;
+  margin-top: 100px;
+  right: 0;
+  border-radius: 15px;
+  transform: rotateY(-360deg);
+}
+
+/* about */
+/* https://www.w3schools.com/css/css_positioning.asp */
+
+.about{
+background-color: black;
+}
+.store {
+  background: black;
+  color: black;
+  
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  
+
+}
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: #ffbd69;
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color: var(--mainWhite);
+}
+.store-item-value {
+  color: --mainYellow;
+}
+
