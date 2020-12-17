@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+  
+    
+}
+.header{
+    height:500px;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    font-family: 'Goldman', cursive;
+}
+.nav{
+    width:95%;
+    height:20%;
+    margin: 20px;
+    color: white;
+}
+
+.nav h1{
+    display: inline;
+   }
+ .nav a{
+   float: right;
+    color:white;
+    margin: 20px;
+    
+} 
+
+.about{
+    padding: 3% 7%;
+    /* background-color: #ff9a8c; */
+    /* color: white; */
+    font-family: 'Goldman', cursive;
+}
+.about p{
+    padding-top: 20px;
+    
+}
+.provinces{
+    padding: 3% 7%;
+    font-family: 'Goldman', cursive;
+}
+.provinces img{
+    margin-top: 20px;
+   border: 5px dotted black;
+}
+#gallery{
+    padding: 3% 7%;
+    /* background-color: #ff9a8c; */
+    /* color: white; */
+    font-family: 'Goldman', cursive;
+}
+#contact{
+    padding: 3% 7%;
+    background-color: #ff9a8c;
+    /* color: white; */
+    font-family: 'Goldman', cursive;
+    text-align: center;
+}
+#contact a{
+    display: block;
+    margin: 20px;
+
+}
