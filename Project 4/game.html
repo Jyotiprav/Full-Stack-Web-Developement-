@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>Space shooter</title>
+  </head>
+  <body style="text-align: center;">
+    <h1>Space Shooter</h1>
+    <img src='bg.jpg' onclick='startGame();' id="welcomeimage"/>
+    <div style="display:none;">
+        <img id="player" src="shredder.png"> 
+        <img id="enemy" src="villain.png">
+        <img id="bg" src="bg.jpg">
+    </div>
+    <canvas height="700" width="1000" id="ctx"/>
+    <script>
+      const welcomeimage = document.getElementById('welcomeimage');
+      const playerimage = document.getElementById('player');
+      const enemyimage = document.getElementById('enemy');
+      const bgimage = document.getElementById('bg');
+      var ctx = document.getElementById('ctx').getContext('2d');
+      var WIDTH = 1000;
+      var HEIGHT = 700;
+      var enemyList=[];
+      ctx.font = "20px Calibri";
+      var player = {
+        x:0,
+        y:0,
+        width:80,
+        height:80
+        };
+        var enemy = {
+          width:50,
+          height:50,
+        };
+        var bullet = {
+          height:10,
+          width:4
+        }
+    
+        drawPlayer = function() {
+          ctx.save();
+          ctx.drawImage(playerimage, player.x,player.y,player.width,player.height);
+          ctx.restore();
+        }
+        drawEnemy = function(a) {
+          ctx.save();
+          ctx.drawImage(enemyimage, a.x,a.y,enemy.width,enemy.height);
+          ctx.restore();
+        }
+        drawBullet = function(b) {
+          ctx.save();
+          ctx.fillStyle = 'red';
+          ctx.fillRect(b.x,b.y,bullet.width,bullet.height);
+          ctx.restore();
+        }
+        updateBullets = function() {
+          for(key in bulletList) {
+            bulletList[key].y -= 10;//to make the bullets go UP
+          }
+        }
+        updateEnemies = function() {
+          for(key in enemyList) {
+            enemyList[key].y += 10;//to make the bullets go UP
+            if (enemyList[key].y>HEIGHT){
+              enemyList[key].y=10;
+            }
+            if(enemyList.length<7){
+              var x1=Math.floor((Math.random() * 800));
+              var y1=Math.floor((Math.random() * 70));
+              enemyList.push({x:x1,y:y1})
+            }
+          }
+        }
+        // =========================================
+        //      Shoot the bullet when spacebar hit
+        // =========================================
+        document.onkeydown = function(event) {
+        //if spacebar pressed,add bullet to bulletlist
+        if(event.keyCode == 32){
+          var bX = player.x+15;
+          var bY = player.y;
+          bulletList.push({x:bX,y:bY});
+        }
+      }
+    // =========================================
+    //      Move the bird with the mouse
+    // =========================================
+    document.getElementById('ctx').onmousemove = function(mouse) {
+        var mouseX = mouse.clientX - document.getElementById('ctx').getBoundingClientRect().left;
+        var mouseY = mouse.clientY - document.getElementById('ctx').getBoundingClientRect().top;
+        player.x=mouseX;
+        player.y=600;
+      }
+    // =============================================
+    //      test collision between bullet and apple
+    // =============================================
+    testCollision = function(bullet,enemy) {
+      return ((bullet.x < enemy.x + 50) &&
+                (enemy.x < bullet.x + 4) &&
+                (bullet.y < enemy.y + 50) &&
+                (enemy.y < bullet.y + 10));
+    }
+    var score=0;
+    update = function() {
+      ctx.clearRect(0,0,WIDTH,HEIGHT);
+        for (var i in enemyList){
+            for(var j in bulletList ){
+              if (testCollision(bulletList[j],enemyList[i])) {
+                score=score+1;
+                bulletList.splice(j,1);
+                enemyList.splice(i,1);  
+              }
+            }
+          }
+        ctx.drawImage(bg,0,0,WIDTH,HEIGHT);//draw background
+        ctx.fillText("Score: "+score,5,490);//draw score
+        enemyList.forEach(drawEnemy);//draw apples
+        drawPlayer()//draw bird
+        bulletList.forEach(drawBullet);//draw bullets
+        updateBullets();//update the position of bullets
+        updateEnemies();
+    }
+    startGame = function() {
+      welcomeimage.style.display="none";
+      for(var i=1;i<=10;i++){
+          var x1=Math.floor((Math.random() * 1000));
+          var y1=Math.floor((Math.random() * 70));
+          enemyList.push({x:x1,y:y1})
+          bulletList = [];
+        }
+        setInterval(update,50);
+      }
+      // startGame();
+    </script>
+  </body>
+</html>
