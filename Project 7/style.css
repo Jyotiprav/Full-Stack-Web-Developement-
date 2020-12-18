@@ -1,0 +1,127 @@
+
+body{ 
+  /* background-image: url("notepad.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  /* background-color: #f4eeff; */
+  background: linear-gradient(rgba(247, 250, 250, 0.5),rgba(255, 255, 255, 0.5)),
+  url("notepad.jpg") center/cover fixed no-repeat;
+  font-family: 'Patrick Hand', cursive;
+  align-content: center;
+}
+/* h1{
+  font-size: 80px;
+} */
+.content{
+  /* background-color: #dcd6f7; */
+  font-family: 'Cardo', serif;
+
+}
+.home_div{
+  min-height: 30vh;
+  
+}
+.banner{
+  color:white;
+  margin-top: 150px;
+}
+.banner-title{
+  color:black;
+  font-size: 105px;
+  
+}
+.banner-link{
+  font-size: 20px;
+  color:black;
+  border: 3px solid black;
+  margin-top: 50px;
+}
+.banner-link:hover{
+  background: black;
+  color:#fe346e;
+}
+
+/* .home_div h1{
+  padding-top: 7%;
+} */
+/* navbar */
+nav{
+  background-color:rgba(0,0,0,0.2);
+  /* margin-bottom: 200px;; */
+}
+
+.navbar-toggler{
+  outline: none !important;
+}
+.navbar-toggler-icon{
+  /* color:white; */
+  font-size: 40px;
+  
+}
+.navbar-toggler-icon:hover{
+  color:pink;
+  
+}
+
+li a{
+  color: black;
+  font-size: 25px;
+  transition: all 0.5s ease-in-out;
+}
+li a:hover{
+  color:#fe346e;
+  transform: scale(1.2);
+}
+footer{
+  background-color:#888888;
+  padding: 7px 15px;
+  color: white;
+  margin-top: 60px;
+}
+/* loging form styling */
+
+/* .login_form{
+  background-color:lightgray;
+  border-radius: 25px;
+  align-content: center;
+  width: 50vw;
+  height: 50vh;
+  display: block;
+  text-align: center;
+  margin: auto;
+
+} */
+/* .login_form form{
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    
+} */
+/* .login_form input{
+  width:30vw;
+  padding: 2%;
+} */
+/* About us styling */
+.about-img-container{
+  position: relative;
+}
+.about{
+  font-size: 30px;
+}
+.about-img{
+  transform: rotate(15deg);
+  border-radius: 10px;
+}
+.signin-img{
+  transform: rotate(-15deg);
+  border-radius: 10px;
+}
+.about-us-heading{
+  text-decoration: underline;
+  text-decoration-color:#fe346e;
+  font-size: 50px;
+}
+
+

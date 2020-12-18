@@ -1,0 +1,57 @@
+<%- include("header") %>
+<!-- alert messages -->
+<% if(msg !=""){ %>
+  <div class="alert alert-success" role="alert">
+    <%= msg %>
+  </div>
+<% } %>
+<!-- Banner -->
+<div class="container-fluid home_div">
+  <div class="row max-height-bg justify-content-center align-items-center">
+    <div class="mx-auto banner text-center">
+      <h1 class="text-capitalize"><strong class="banner-title">Your Account</strong></h1>
+    </div>
+  </div>
+</div>
+<!-- Page Content -->
+<div class="container my-5">
+  <div class="content ">
+<h1> Your Posts  </h1>
+<% for(var i=0;i<post_info.post.length;i++){ %>
+    <div class="card text-center">
+      <form class="" action="/delete" method="post">
+        <div class="card-header d-flex justify-content-between">
+          <h5 class="card-title"> <%= post_info.post[i].name %></h5>
+          <button name="item_id" value="<%= post_info.post[i]._id %>" type="submit" class="btn btn-primary"><i class="fas fa-trash"></i></button>
+          <input type="hidden" name="user_id" value="<%= post_info._id %>">
+        </div>
+      </form>
+        <div class="card-body">
+          
+          <p class="card-text"> <%= post_info.post[i].post %> </p>
+        </div>
+        <div class="card-footer text-muted">
+          <%= post_info.post[i].date %>
+        </div>
+    </div>
+    
+    <br>
+<% } %>
+
+<h1>Create new posts</h1>
+<!-- <a href="post">Post</a> -->
+<form action="/post" method="post">
+    <div class="form-group">
+      <label for="nameinput">Enter Your Name:</label>
+      <input class="form-control" type="text" placeholder="Name" name="name">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="msg"></textarea>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  </div>
+  </div>
+
+  <%- include("footer") %>

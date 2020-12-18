@@ -1,0 +1,22 @@
+{
+  "name": "bloginnode_class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.2",
+    "popups": "^1.1.3",
+    "sweetalert": "^2.1.2"
+  },
+  "engines": {
+    "node": "13.7.0"
+  }
+}

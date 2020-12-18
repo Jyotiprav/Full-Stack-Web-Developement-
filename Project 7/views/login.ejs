@@ -1,0 +1,86 @@
+<%- include("header") %>
+<!-- alert messages -->
+<% if(success !=""){ %>
+  <div class="alert alert-success" role="alert">
+    <%= success %>
+  </div>
+<% } %>
+<div class="container">
+  <div class="row">
+    <h1 class="mx-auto my-3 banner-title">Login Here</h1>
+  </div>
+
+<div class="row">
+  <div class="col">
+    <form action="/login" method="post">
+    <div class="form-group">
+      <!-- <label for="exampleInputEmail1">Email address</label> -->
+      <input type="email" name="email" class="form-control w-50 mx-auto mt-5" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+      <small id="emailHelp" class="form-text text-muted w-50 mx-auto">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      
+      <input type="password" name="password" class="form-control w-50 mx-auto mt-5" id="exampleInputPassword1" placeholder="Enter Your Password">
+      
+    </div>
+    <div class="container my-5">
+      <div class="row">
+        <div class="col text-center">
+          <button type="submit" class="btn btn-primary text-center my-5">Submit</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h3>Not a Member?? Create your account now</h3>
+          <a href="signin">Sign Up</a>
+        </div>
+      </div>
+    </div>
+    
+    
+    </form>
+    
+  </div>
+  <!-- <div class="col-lg-6">
+    <img src="form.jpg" alt="" width="40vw" height="40vh">
+  </div> -->
+</div>
+
+</div>
+<!-- <div class="container-fluid home_div">
+  <div class="row max-height-bg justify-content-center align-items-center">
+    <div class="mx-auto banner text-center">
+      <h1 class="text-capitalize"><strong class="banner-title">Login</strong></h1>
+      
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container my-5">
+  <div class="content "> -->
+   <!-- bs4 form -->
+  <!-- <form action="/login" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+
+  <!-- <h1>New User</h1>
+  
+  </div>
+</div> -->
+
+  
+
+  <%- include("footer") %>

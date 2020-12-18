@@ -1,0 +1,43 @@
+<%- include("header") %>
+<div class="container-fluid home_div">
+  <div class="row max-height-bg justify-content-center align-items-center">
+    <div class="mx-auto banner text-center">
+      <h1 class="text-capitalize"><strong class="banner-title">Check Our Posts Here</strong></h1>
+      
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="content ">
+    <!-- CARD SECTION -->
+  <% for(var i=(posts_info.length)-1;i>=0;i--){ %>
+    
+    <div class="card text-center">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <h5 class="card-title"> <%= posts_info[i].name %></h5>
+        <p class="card-text"> <%= posts_info[i].post %> </p>
+      </div>
+      <div class="card-footer text-muted">
+        <%= posts_info[i].date %>
+      </div>
+    </div>
+    <br>
+  
+  
+  
+  <% } %>
+  </div>
+</div>
+  
+
+  
+  
+
+
+
+
+<%- include("footer") %>
